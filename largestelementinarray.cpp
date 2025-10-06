@@ -1,5 +1,6 @@
 //https://www.geeksforgeeks.org/problems/largest-element-in-array4009/0
 #include <bits/stdc++.h>
+using namespace std;
 
 class Solution {
   public:
