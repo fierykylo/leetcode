@@ -11,7 +11,7 @@ public:
             if (nums[i] == 1)
             {
                 count++;
-                maxi = max(maxi,count);
+                maxi = max(maxi,count); // use of max function that is something cool yk
             }
             else
             {
