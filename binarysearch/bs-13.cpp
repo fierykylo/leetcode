@@ -1,63 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/
+
 class Solution 
 {
 public:
+    bool possible(vector<int>& v, int m, int k, int day)
+{
+    int bouquet = 0, count = 0;
 
-    int findmin(vector<int> &v)
+    for (int x : v)
     {
-        int mini = INT_MAX;
-        for(int x : v)
+        if (x <= day)
         {
-            mini = min(x,mini);
-        }
-        return mini;
-    }
-    int findmax(vector<int> &v)
-    {
-        int maxno = INT_MIN;
-        for (int x : v)
-            maxno = max(x, maxno);
-        return maxno;
-    }
-
-    bool possible(vector<int> &v, int m, int k, int day)
-    {
-        int n = v.size();
-        int bouquet = 0;
-        int count = 0;
-        for (int i = 0; i < n; i++)
-        {
-            if (v[i] <= day)
-            {
-                count++;
-            }
-            else
-            {
-                bouquet += (count / k);
-                count = 0;
-            }
-        }
-        bouquet += (count / k);
-        if (bouquet >= m)
-        {
-            return true;
+            count++;
         }
         else
         {
-            return false;
+            bouquet += (count / k);
+            if (bouquet >= m) return true;
+            count = 0;
         }
     }
+    bouquet += (count / k);
+    return (bouquet >= m);
+}
+
     int minDays(vector<int>& bloomDay, int m, int k) 
     {
-        int low = findmin(bloomDay);
-        int high = findmax(bloomDay);
+        int low = *min_element(bloomDay.begin(),bloomDay.end());
+        int high = *max_element(bloomDay.begin(), bloomDay.end());
         int n = bloomDay.size();
-        if (n < (m * k))
+        if (n < 1LL * m * k)
         {
             return -1;
         }
+
         while (low <= high)
         {
             int mid = low + (high - low) / 2;
