@@ -38,7 +38,7 @@ void merge (vector<int> &arr, int low, int mid, int high)
 
 void mergeSort(vector<int> &arr, int low, int high)
 {
-    if (low == high)
+    if (low >= high)
     {
         return;
     }
@@ -50,5 +50,18 @@ void mergeSort(vector<int> &arr, int low, int high)
 
 int main(void)
 {
+    int n;
+    cin >> n;
+    vector<int> arr(n);
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
+    }
+    mergeSort(arr, 0, n-1);
+    for (auto it : arr)
+    {
+        cout << it << " ";
+    }
+    cout << "\n";
 
 }
