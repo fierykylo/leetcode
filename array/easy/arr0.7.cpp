@@ -5,7 +5,7 @@ using namespace std;
 // stimulation greedy
 // leetcode medium but ts is easy and its more of a quest problem so i just put it here
 // anyways marked as a stack since we are stimulating a stack
-//https://leetcode.com/problems/build-an-array-with-stack-operations/?envType=problem-list-v2&envId=dsa-linear-shoal-stack
+//https://leetcode.com/problems/build-an-array-with-stack-operations/
 
 class Solution {
 public:
