@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/?envType=daily-question&envId=2026-03-01
+//https://leetcode.com/problems//?envType=daily-question&envId=2026-03-01
 //1st march
 
 class Solution {
