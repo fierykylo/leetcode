@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//https://leetcode.com/problems/find-the-maximum-achievable-number/description/?envType=problem-list-v2&envId=prshgx6i
+
+class Solution {
+public:
+    int theMaximumAchievableX(int num, int t) 
+    {
+        return (num + 2 * t);
+    }
+};
