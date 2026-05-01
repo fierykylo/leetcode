@@ -19,4 +19,4 @@ public:
         return(product > 0) ? 1 : -1;
 
     }
-}
+};
