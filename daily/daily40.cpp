@@ -76,7 +76,7 @@ public:
                 }
 
                 for(int multiple = nums[i]; multiple <= maxEl; multiple += nums[i]) {
-                    if(!mp.contains(multiple)) {
+                    if(!mp.count(multiple)) {
                         continue;
                     }
 
