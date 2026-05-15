@@ -14,7 +14,8 @@ public:
         vector<int> diff(2 * limit + 2, 0);
 
         for(int i = 0; i < n/2; i++) {  
-
+     
+            
             int a = nums[i];
             int b = nums[n-1-i];
 
