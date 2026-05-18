@@ -6,7 +6,7 @@ using namespace std;
 //17th may 2026
 
 class Solution {
-public:
+public: 
     int n;
 
     bool dfs(vector<int>& arr, int i) {
