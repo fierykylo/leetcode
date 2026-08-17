@@ -4,6 +4,11 @@ using namespace std;
 #define int long long 
 //https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P
 
+#include <bits/stdc++.h>
+using namespace std;
+
+#define int long long 
+
 auto solve()
 {
     int n;
@@ -13,23 +18,18 @@ auto solve()
     {
         cin >> v[i];
     }
-    int op = 0;
-    bool flag = true;
-    while(flag)
-    {
-        for(auto it: v)
+    int ans = LLONG_MAX;
+   for(auto x : v)
+   {
+        int cnt = 0;
+        while(x % 2 == 0)
         {
-            if(it % 2 != 0)
-            {
-                flag = false;
-                cout << op << "\n";
-            }
-            else{
-                it /= 2;
-            }
+            x /= 2;
+            cnt++;
         }
-        op++;
-    }
+        ans = min(cnt, ans);
+   }
+   cout << ans << "\n";   
 }
 
 signed main(void)
